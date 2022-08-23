@@ -1,7 +1,11 @@
+/** @format */
+
+import Rocket from '../components/Rocket';
+
 function Rockets() {
   return (
     <div>
-      <h1>Rockets</h1>
+      <Rocket />
     </div>
   );
 }
