@@ -5,3 +5,129 @@
   -webkit-user-select: none;
   -webkit-user-drag: none;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #a7a7a7;
+  margin: 2rem;
+  padding-bottom: 1rem;
+  align-items: center;
+}
+
+.subheader {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.header-planet {
+  width: 45px;
+  height: 45px;
+}
+
+.nav-ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: blue;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* missions section */
+
+.missions {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+
+.misions-header {
+  padding: 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  border: 1px solid #a7a7a7;
+  justify-items: center;
+  align-items: center;
+}
+
+.mission-item:nth-child(even) {
+  padding: 1rem;
+  border: 1px solid #a7a7a7;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  justify-items: center;
+  background-color: #fff;
+}
+
+.mission-item:nth-child(odd) {
+  padding: 1rem;
+  border: 1px solid #a7a7a7;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  justify-items: center;
+  background-color: rgb(232, 232, 232);
+}
+
+.mission-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.mission-description {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.membership {
+  font-size: 1rem;
+  text-align: justify;
+  justify-self: center;
+  align-self: center;
+  background-color: rgb(128, 128, 128);
+  padding: 0.3rem;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.membership.active {
+  background-color: rgb(8, 116, 8);
+}
+
+.leave-btn {
+  padding: 0.3rem;
+  border-radius: 5px;
+  justify-self: center;
+  align-self: center;
+  height: 2rem;
+  color: red;
+  border: 1px solid red;
+}
+
+.join-btn {
+  padding: 0.3rem;
+  border-radius: 5px;
+  justify-self: center;
+  align-self: center;
+  height: 2rem;
+  border: 1px solid gray;
+}
