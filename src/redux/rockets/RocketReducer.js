@@ -11,7 +11,7 @@ const rocketReducer = (state = [], action) => {
     case CANCEL_RESERVATION:
       return [action.payload];
     case SET_ROCKETS:
-      return [];
+      return [...action.payload];
     default:
       return state;
   }
@@ -29,7 +29,6 @@ const actionSetRockets = () => async (dispatch) => {
     },
   });
   const rockets = await response.json();
-  console.log(rockets);
   dispatch({ type: SET_ROCKETS, payload: rockets });
 };
 
