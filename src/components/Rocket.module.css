@@ -1,0 +1,16 @@
+.rocket {
+    outline: 1px solid black;
+    display: flex;
+    margin:0 4%;
+    margin-bottom:2%;
+}
+
+.frame {
+    width:300px;
+    outline: 1px solid red;
+    margin-right:1.5%;
+}
+
+.image {
+    width:300px;
+}
