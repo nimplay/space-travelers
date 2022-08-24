@@ -14,7 +14,7 @@ const Rocket = (props) => {
 
   return (
     <div className={styles.rocket}>
-      <div>
+      <div className={styles.frame}>
         <img src={flickr} alt="space rocket" />
       </div>
       <div className="rocket-description">
