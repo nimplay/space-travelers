@@ -5,7 +5,6 @@ import Rocket from '../components/Rocket';
 
 function Rockets() {
   const rockets = useSelector((state) => state.rockets);
-  // console.log(rockets);
 
   const mappedRockets = rockets.map((rocket) => {
     const {
@@ -20,6 +19,7 @@ function Rockets() {
       rocket_name,
       description,
       flickr_images,
+      reserved: false,
     };
   });
 
@@ -32,6 +32,7 @@ function Rockets() {
           title={rocket.rocket_name}
           desc={rocket.description}
           flickr={rocket.flickr_images[0]}
+          reserved={rocket.reserved}
         />
       ))}
     </div>

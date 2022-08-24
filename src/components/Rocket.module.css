@@ -28,6 +28,7 @@
 
 .btn {
     width:fit-content;
+    outline:1px solid black;
 }
 
 button {
@@ -36,6 +37,18 @@ button {
     border-radius: 3px;
     background-color: blue;
     color:white;
+    cursor: pointer;
+}
 
-    
+.reserved {
+    padding: 2px 5px;
+    background-color: rgb(5, 112, 112);
+    border-radius: 3px;
+    margin-right:5px;
+    color:white;
+    font-weight: bold;
+}
+
+.description {
+    line-height: 25px;
 }

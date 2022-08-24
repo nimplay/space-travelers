@@ -6,8 +6,15 @@ const SET_ROCKETS = 'space-traveller-hub/rockets/SET_ROCKET';
 
 const rocketReducer = (state = [], action) => {
   switch (action.type) {
-    case RESERVE_ROCKET:
-      return [action.payload];
+    case RESERVE_ROCKET: {
+      const newState = state.map((rocket) => {
+        if (rocket.id === action.payload) {
+          return { ...rocket, reserved: true };
+        }
+        return rocket;
+      });
+      return newState;
+    }
     case CANCEL_RESERVATION:
       return [action.payload];
     case SET_ROCKETS:
