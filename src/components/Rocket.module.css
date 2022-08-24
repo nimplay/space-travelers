@@ -7,10 +7,15 @@
 
 .frame {
     width:300px;
-    outline: 1px solid red;
     margin-right:1.5%;
 }
 
 .image {
     width:300px;
+}
+
+.infor {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

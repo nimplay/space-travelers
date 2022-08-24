@@ -1,25 +1,20 @@
-/**
- * /*
- *   eslint-disable camelcase
- *
- * @format
- */
+/* eslint-disable camelcase */
 
 import { useSelector } from 'react-redux';
 import Rocket from '../components/Rocket';
 
 function Rockets() {
   const rockets = useSelector((state) => state.rockets);
+  // console.log(rockets);
 
   const mappedRockets = rockets.map((rocket) => {
     const {
       id,
-      // eslint-disable-next-line camelcase
       rocket_name,
       description,
-      // eslint-disable-next-line camelcase
       flickr_images,
     } = rocket;
+
     return {
       id,
       rocket_name,
@@ -34,7 +29,7 @@ function Rockets() {
         <Rocket
           key={rocket.id}
           id={rocket.id}
-          title={rocket.name}
+          title={rocket.rocket_name}
           desc={rocket.description}
           flickr={rocket.flickr_images[0]}
         />

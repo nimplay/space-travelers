@@ -8,6 +8,8 @@ const Rocket = (props) => {
     id, title, desc, flickr,
   } = props;
 
+  // console.log(`id: ${id}`);
+
   const reserveHandle = (id) => {
     console.log(id);
   };
@@ -17,14 +19,16 @@ const Rocket = (props) => {
       <div className={styles.frame}>
         <img src={flickr} alt="space rocket" className={styles.image} />
       </div>
-      <div className="rocket-description">
-        <h1>{title}</h1>
-        <p>{desc}</p>
-      </div>
-      <div>
-        <button type="button" onClick={() => reserveHandle(id)}>
-          Reserve Rocket
-        </button>
+      <div className={styles.infor}>
+        <div className="rocket-description">
+          <h1>{title}</h1>
+          <p>{desc}</p>
+        </div>
+        <div>
+          <button type="button" onClick={() => reserveHandle(id)}>
+            Reserve Rocket
+          </button>
+        </div>
       </div>
     </div>
   );
