@@ -1,6 +1,7 @@
 /** @format */
 
 import PropTypes from 'prop-types';
+import styles from './Rocket.module.css';
 
 const Rocket = (props) => {
   const {
@@ -12,7 +13,7 @@ const Rocket = (props) => {
   };
 
   return (
-    <div className="rocket">
+    <div className={styles.rocket}>
       <div>
         <img src={flickr} alt="space rocket" />
       </div>
