@@ -1,5 +1,4 @@
 .rocket {
-    outline: 1px solid black;
     display: flex;
     margin:0 4%;
     margin-bottom:2%;
@@ -18,4 +17,25 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 0 1%;
+}
+
+.title {
+    width:fit-content;
+    font-size: 18px;
+    margin-bottom: 2%;
+}
+
+.btn {
+    width:fit-content;
+}
+
+button {
+    all:unset;
+    padding:15px 20px;
+    border-radius: 3px;
+    background-color: blue;
+    color:white;
+
+    
 }

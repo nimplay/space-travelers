@@ -21,10 +21,10 @@ const Rocket = (props) => {
       </div>
       <div className={styles.infor}>
         <div className="rocket-description">
-          <h1>{title}</h1>
+          <h1 className={styles.title}>{title}</h1>
           <p>{desc}</p>
         </div>
-        <div>
+        <div className={styles.btn}>
           <button type="button" onClick={() => reserveHandle(id)}>
             Reserve Rocket
           </button>
