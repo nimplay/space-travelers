@@ -1,13 +1,15 @@
 .wrapper {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.missions, .rockets {
-    width:40%;
+.missions,
+.rockets {
+  width: 40%;
 }
 
-.reservedRockets, .reservedMissions {
-    margin-top: 10px;
+.reservedRockets,
+.reservedMissions {
+  margin-top: 10px;
 }
