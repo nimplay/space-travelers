@@ -1,4 +1,5 @@
-/** @format */
+/*eslint-disable */
+
 
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
@@ -7,43 +8,40 @@ import { actionReserve } from '../redux/rockets/RocketReducer';
 
 const Rocket = (props) => {
   const dispatch = useDispatch();
-  const {
-    id, title, desc, flickr, reserved,
-  } = props;
+  const { rocket } = props;
 
-  console.log(reserved);
+  // const [res, setReserved] = useState([id, title, desc, flickr, reserved]);
 
-  const reserveHandle = (id) => {
-    dispatch(actionReserve(id));
-  };
+  // const reserveHandle = (id) => {
+  //   // setReserved(!res[4]);
+  //   dispatch(actionReserve(id));
+  // };
 
-  const cancelReservationHandle = (id) => {
-    console.log(`Cancel: ${id} is ${reserved}`);
-  };
+  // const cancelReservationHandle = (id) => {
+  //   console.log(`Cancel: ${id} is ${reserved}`);
+  // };
 
   return (
     <div className={styles.rocket}>
       <div className={styles.frame}>
-        <img src={flickr} alt="space rocket" className={styles.image} />
+        <img src={rocket.flickr_images[0]} alt="space rocket" className={styles.image} />
       </div>
       <div className={styles.infor}>
         <div className="rocket-description">
-          <h1 className={styles.title}>{title}</h1>
+          <h1 className={styles.title}>{rocket.rocket_name}</h1>
           <p className={styles.description}>
-            { reserved ? (<span className={styles.reserved}>Reserved</span>) : null}
-            {desc}
+            {rocket.reserved ? (
+              <span className={styles.reserved}>Reserved</span>
+            ) : null}
+            {rocket.description}
           </p>
         </div>
         <div className={styles.btn}>
-          {reserved ? (
-            <button type="button" onClick={() => cancelReservationHandle(id)}>
-              Cancel Reservation
-            </button>
-          ) : (
-            <button type="button" onClick={() => reserveHandle(id)}>
-              Reserve Rocket
-            </button>
-          )}
+          <button
+            type="button"
+            onClick={() => dispatch(actionReserve(rocket.id))}>
+            {rocket.reserved ? 'Cancel Reservation' : `reserve ${rocket.rocket_name}`}
+          </button>
         </div>
       </div>
     </div>
