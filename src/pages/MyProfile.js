@@ -9,8 +9,6 @@ function MyProfile() {
   const missions = useSelector((state) => state.missions);
   const reservedMissions = missions.filter((mission) => mission.reserved === true);
 
-  console.log(reservedMissions);
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.missions}>
