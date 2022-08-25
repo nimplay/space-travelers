@@ -1,0 +1,10 @@
+.item {
+    padding: 10px 0 25px 15px;
+    width:100%;
+    border: 1px solid rgb(200, 200, 200);
+    border-top: none;
+}
+
+.item:first-child {
+    border-top: 1px solid rgb(200, 200, 200);
+}

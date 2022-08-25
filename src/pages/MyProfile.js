@@ -6,10 +6,10 @@ import ProfileItem from '../components/ProfileItem';
 function MyProfile() {
   const rockets = useSelector((state) => state.rockets);
   const reservedRockets = rockets.filter((rocket) => rocket.reserved === true);
-  // const missions = useSelector((state) => state.missions);
-  // const reservedMissions = rockets.filter((mission) => mission.reserved === true );
+  const missions = useSelector((state) => state.missions);
+  const reservedMissions = missions.filter((mission) => mission.reserved === true);
 
-  console.log(reservedRockets);
+  console.log(reservedMissions);
 
   return (
     <div className={styles.wrapper}>
@@ -17,14 +17,21 @@ function MyProfile() {
         <h1>My Missions</h1>
         <div className={styles.reservedRockets}>
           {reservedRockets.map((reservedRocket) => (
-            <ProfileItem key={reservedRocket.id} item={reservedRocket.rocket_name} />
+            <ProfileItem
+              key={reservedRocket.id}
+              item={reservedRocket.rocket_name}
+            />
           ))}
         </div>
       </div>
 
       <div className={styles.rockets}>
         <h1>My Rockets</h1>
-        <div className={styles.rerservdMissions}>reserevd missions</div>
+        <div className={styles.reservedMissions}>
+          {reservedMissions.map((reservedMission) => (
+            <ProfileItem key={reservedMission.id} item={reservedMission.mission_name} />
+          ))}
+        </div>
       </div>
     </div>
   );
