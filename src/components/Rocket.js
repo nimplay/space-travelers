@@ -1,5 +1,4 @@
-/*eslint-disable */
-
+/** @format */
 
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
@@ -9,22 +8,14 @@ import { actionReserve } from '../redux/rockets/RocketReducer';
 const Rocket = (props) => {
   const dispatch = useDispatch();
   const { rocket } = props;
-
-  // const [res, setReserved] = useState([id, title, desc, flickr, reserved]);
-
-  // const reserveHandle = (id) => {
-  //   // setReserved(!res[4]);
-  //   dispatch(actionReserve(id));
-  // };
-
-  // const cancelReservationHandle = (id) => {
-  //   console.log(`Cancel: ${id} is ${reserved}`);
-  // };
-
   return (
     <div className={styles.rocket}>
       <div className={styles.frame}>
-        <img src={rocket.flickr_images[0]} alt="space rocket" className={styles.image} />
+        <img
+          src={rocket.flickr_images[0]}
+          alt="space rocket"
+          className={styles.image}
+        />
       </div>
       <div className={styles.infor}>
         <div className="rocket-description">
@@ -39,8 +30,11 @@ const Rocket = (props) => {
         <div className={styles.btn}>
           <button
             type="button"
-            onClick={() => dispatch(actionReserve(rocket.id))}>
-            {rocket.reserved ? 'Cancel Reservation' : `reserve ${rocket.rocket_name}`}
+            onClick={() => dispatch(actionReserve(rocket.id))}
+          >
+            {rocket.reserved
+              ? 'Cancel Reservation'
+              : `reserve ${rocket.rocket_name}`}
           </button>
         </div>
       </div>
@@ -49,18 +43,22 @@ const Rocket = (props) => {
 };
 
 Rocket.defaultProps = {
-  title: '',
-  desc: '',
-  flickr: '',
-  id: 0,
-  reserved: false,
+  rocket: {
+    flickr_images: [],
+    rocket_name: '',
+    reserved: false,
+    description: '',
+    id: '',
+  },
 };
 
 Rocket.propTypes = {
-  title: PropTypes.string,
-  desc: PropTypes.string,
-  flickr: PropTypes.string,
-  id: PropTypes.number,
-  reserved: PropTypes.bool,
+  rocket: PropTypes.shape({
+    flickr_images: [],
+    rocket_name: '',
+    reserved: Boolean,
+    description: '',
+    id: '',
+  }),
 };
 export default Rocket;
