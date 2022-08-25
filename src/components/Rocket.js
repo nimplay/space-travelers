@@ -9,7 +9,7 @@ const Rocket = (props) => {
   const dispatch = useDispatch();
   const { rocket } = props;
   return (
-    <div className={styles.rocket}>
+    <div className={styles.rocket} data-testid="test">
       <div className={styles.frame}>
         <img
           src={rocket.flickr_images[0]}
@@ -54,11 +54,11 @@ Rocket.defaultProps = {
 
 Rocket.propTypes = {
   rocket: PropTypes.shape({
-    flickr_images: [],
-    rocket_name: '',
-    reserved: Boolean,
-    description: '',
-    id: '',
+    flickr_images: PropTypes.arrayOf(PropTypes.string),
+    rocket_name: PropTypes.string,
+    reserved: PropTypes.bool,
+    description: PropTypes.string,
+    id: PropTypes.string,
   }),
 };
 export default Rocket;
