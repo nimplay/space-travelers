@@ -1,0 +1,53 @@
+.rocket {
+  display: flex;
+  margin: 0 4%;
+  margin-bottom: 2%;
+}
+
+.frame {
+  width: 300px;
+  margin-right: 1.5%;
+}
+
+.image {
+  width: 300px;
+}
+
+.infor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0 1%;
+}
+
+.title {
+  width: fit-content;
+  font-size: 18px;
+  margin-bottom: 2%;
+}
+
+.btn {
+  width: fit-content;
+}
+
+button {
+  all: unset;
+  padding: 15px 20px;
+  border-radius: 3px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.reserved {
+  padding: 2px 5px;
+  background-color: rgb(5, 112, 112);
+  border-radius: 3px;
+  margin-right: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.description {
+  line-height: 25px;
+}

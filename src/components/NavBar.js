@@ -14,9 +14,6 @@ function NavBar() {
             <Link to="/" className="nav-link">Rockets</Link>
           </li>
           <li className="nav-li">
-            <Link to="/dragons" className="nav-link">Dragons</Link>
-          </li>
-          <li className="nav-li">
             <Link to="/missions" className="nav-link">Missions</Link>
           </li>
           <li className="nav-li">

@@ -1,10 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Rockets from './pages/Rockets';
+import Rockets from './pages/RocketsPage';
 import Missions from './pages/Missions';
-import MyProfile from './pages/MyProfile';
-import Dragons from './pages/Dragons';
+import MyProfile from './pages/MyProfilePage';
 
 function App() {
   return (
@@ -12,7 +11,6 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<Rockets />} />
-        <Route path="/dragons" element={<Dragons />} />
         <Route path="/missions" element={<Missions />} />
         <Route path="/my-profile" element={<MyProfile />} />
       </Routes>
